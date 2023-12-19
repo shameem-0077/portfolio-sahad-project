@@ -29,10 +29,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['web-production-d0ef.up.railway.app', 'mandadi.ca', ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://mandadi.ca',
+    'https://web-production-d0ef.up.railway.app',
     'https://mandadi.ca',
 ]
-
 
 # Application definition
 
