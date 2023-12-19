@@ -26,11 +26,13 @@ SECRET_KEY = 'django-insecure-*)k=iaq9i7xeqho#*!ip^e2$^y!s&z17n@@y9y#56=%k@=)d*p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['web-production-d0ef.up.railway.app', 'mandadi.ca', ]
+ALLOWED_HOSTS = ['web-production-d0ef.up.railway.app', 'mandadi.ca', 'www.mandadi.ca', ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-d0ef.up.railway.app',
     'https://mandadi.ca',
+    'https://www.mandadi.ca',
+
 ]
 
 # Application definition
