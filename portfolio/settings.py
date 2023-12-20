@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-*)k=iaq9i7xeqho#*!ip^e2$^y!s&z17n@@y9y#56=%k@=)d*p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['web-production-d0ef.up.railway.app', 'mandadi.ca', 'www.mandadi.ca', ]
+ALLOWED_HOSTS = ['web-production-d0ef.up.railway.app',
+                 'mandadi.ca', 'www.mandadi.ca', '127.0.0.1', ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-d0ef.up.railway.app',
@@ -127,7 +128,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 

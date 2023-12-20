@@ -1214,6 +1214,9 @@ li.social-links a {
 .event_dit ul li a:hover {
     color: #0f2d52;
 }
+.event_dit h4 {
+    color: #000;
+}
 
 .service-widget h3 {
     font-size: 21px;
