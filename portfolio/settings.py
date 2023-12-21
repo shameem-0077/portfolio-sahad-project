@@ -24,15 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*)k=iaq9i7xeqho#*!ip^e2$^y!s&z17n@@y9y#56=%k@=)d*p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['web-production-d0ef.up.railway.app',
-                 'mandadi.ca', 'www.mandadi.ca', '127.0.0.1', ]
+ALLOWED_HOSTS = ['web-production-d0ef.up.railway.app', 'api.mandadi.ca', '127.0.0.1', ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-d0ef.up.railway.app',
-    'https://mandadi.ca',
-    'https://www.mandadi.ca',
+    'https://api.mandadi.ca',
 
 ]
 
@@ -45,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 
     'web',
 ]
@@ -143,3 +142,11 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
