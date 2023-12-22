@@ -9,7 +9,7 @@ from web.models import Event, Gallery
 
 
 @api_view(['GET'])
-@permission_classes((IsAuthenticated,))
+@permission_classes((AllowAny,))
 def list_events(request):
     instances = Event.objects.all()
 
@@ -32,7 +32,7 @@ def list_events(request):
 
 
 @api_view(['GET'])
-@permission_classes((IsAuthenticated,))
+@permission_classes((AllowAny,))
 def list_gallery(request):
     instances = Gallery.objects.all()
 
