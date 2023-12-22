@@ -41,6 +41,7 @@ CSRF_TRUSTED_ORIGINS = [
 
 ]
 
+CORS_ALLOW_CREDENTIALS: True
 # Application definition
 
 INSTALLED_APPS = [
