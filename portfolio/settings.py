@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['web-production-d0ef.up.railway.app', 'api.mandadi.ca', '127.0.
 
 CORS_ALLOWED_ORIGINS = [
     "https://mandadi.ca",
+    'https://www.mandadi.ca',
     "http://localhost:3000",
     "http://127.0.0.1:5500",
 ]
@@ -38,6 +39,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://web-production-d0ef.up.railway.app',
     'https://api.mandadi.ca',
     'https://mandadi.ca',
+    'https://www.mandadi.ca',
 
 ]
 
