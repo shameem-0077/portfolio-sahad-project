@@ -6,4 +6,5 @@ app_name = "api_v1_web"
 urlpatterns = [
     path("list-events/", views.list_events, name="list_events"),
     path("list-gallery/", views.list_gallery, name="list_gallery"),
+    path("contact/", views.contact, name="contact"),
 ]

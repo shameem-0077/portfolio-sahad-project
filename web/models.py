@@ -20,3 +20,19 @@ class Gallery(models.Model):
 
     def __str__(self):
         return str(self.pk)
+
+
+class Contact(models.Model):
+    first_name = models.CharField(max_length=155)
+    last_name = models.CharField(max_length=155)
+    email = models.EmailField()
+    phone_number = models.CharField(max_length=123)
+    message = models.TextField(null=True, blank=True)
+
+
+    class Meta:
+        verbose_name = "Contact"
+        verbose_name_plural = "Contacts"
+
+    def __str__(self):
+        return self.first_name
