@@ -491,57 +491,6 @@
                 </div>
             </div>
 
-            <!-- <div class="col-md-4">
-                <div class="participate-wrap">
-                    <small>Let's speak</small>
-                    <figure>
-                        <img
-                            src="{% static 'uploads/politic_05.jpg' %}"
-                            alt=""
-                            class="img-responsive"
-                        /> -->
-            <!-- <figcaption><a href="#" class="global-radius"> <i class="flaticon-unlink"></i> </a></figcaption> -->
-            <!-- </figure>
-                    <div class="event_dit">
-                        <h4>
-                            upcoming events will be posted here - stay tuned
-                        </h4> -->
-            <!-- <ul>
-								<li> <a href="#"> <i class="fa fa-calendar"></i> 24-10-2015 </a> </li>
-								<li> <a href="#"> <i class="fa fa-clock-o"></i> 7:00 PM to 9:00 PM </a>  </li>
-								<li> <a href="#"> <i class="fa fa-map-marker"></i> NY City, USA </a> </li>
-							</ul>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorum numquam facilis aut non obcaecati dolor sequi voluptatem mollitia quasi! Ratione amet </p> -->
-            <!-- <a href="event-detail.html" class="btn btn-light btn-radius btn-brd grd1">Detail</a> -->
-            <!-- </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="col-md-4">
-                <div class="participate-wrap">
-                    <small>Join Us </small>
-                    <figure>
-                        <img
-                            src="{% static 'uploads/politic_06.jpg' %}"
-                            alt=""
-                            class="img-responsive"
-                        /> -->
-            <!-- <figcaption><a href="#" class="global-radius"> <i class="flaticon-unlink"></i> </a></figcaption> -->
-            <!-- </figure>
-                    <div class="event_dit">
-                        <h4>
-                            upcoming events will be posted here - stay tuned
-                        </h4> -->
-            <!-- <ul>
-								<li> <a href="#"> <i class="fa fa-calendar"></i> 24-10-2015 </a> </li>
-								<li> <a href="#"> <i class="fa fa-clock-o"></i> 7:00 PM to 9:00 PM </a>  </li>
-								<li> <a href="#"> <i class="fa fa-map-marker"></i> NY City, USA </a> </li>
-							</ul>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, laborum laudantium explicabo hic minima ipsum, ad, error vero deleniti iste optio officiis quis ab </p> -->
-            <!-- <a href="event-detail.html" class="btn btn-light btn-radius btn-brd grd1">Detail</a> -->
-            <!-- </div>
-                </div>
-            </div> -->
             {% endfor %}
         </div>
     </div>
@@ -572,16 +521,17 @@
         </div>
 
         <div class="gallery-list row">
+            {% for gallery in gallery %}
             <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
                 <div class="gallery-single fix">
                     <img
-                        src="{% static 'uploads/cant/G_01.jpeg' %}"
+                        src="{{ gallery.image.url }}"
                         class="img-responsive"
                         alt="Image"
                     />
                     <div class="img-overlay">
                         <a
-                            href="{% static 'uploads/cant/G_01.jpeg' %}"
+                            href="{{ gallery.image.url }}"
                             data-rel="prettyPhoto[gal]"
                             class="hoverbutton global-radius"
                             ><i class="flaticon-unlink"></i
@@ -589,96 +539,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4 col-sm-6 gallery-grid gal_c gal_b">
-                <div class="gallery-single fix">
-                    <img
-                        src="{% static 'uploads/cant/G-02.jpeg' %}"
-                        class="img-responsive"
-                        alt="Image"
-                    />
-                    <div class="img-overlay">
-                        <a
-                            href="{% static 'uploads/cant/G-02.jpeg' %}"
-                            data-rel="prettyPhoto[gal]"
-                            class="hoverbutton global-radius"
-                            ><i class="flaticon-unlink"></i
-                        ></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-                <div class="gallery-single fix">
-                    <img
-                        src="{% static 'uploads/cant/G_03.jpeg' %}"
-                        class="img-responsive"
-                        alt="Image"
-                    />
-                    <div class="img-overlay">
-                        <a
-                            href="{% static 'uploads/cant/G_03.jpeg' %}"
-                            data-rel="prettyPhoto[gal]"
-                            class="hoverbutton global-radius"
-                            ><i class="flaticon-unlink"></i
-                        ></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 gallery-grid gal_b gal_a">
-                <div class="gallery-single fix">
-                    <img
-                        src="{% static 'uploads/cant/G_04.jpeg' %}"
-                        class="img-responsive"
-                        alt="Image"
-                    />
-                    <div class="img-overlay">
-                        <a
-                            href="{% static 'uploads/cant/G_04.jpeg' %}"
-                            data-rel="prettyPhoto[gal]"
-                            class="hoverbutton global-radius"
-                            ><i class="flaticon-unlink"></i
-                        ></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-                <div class="gallery-single fix">
-                    <img
-                        src="{% static 'uploads/cant/G_05.jpeg' %}"
-                        class="img-responsive"
-                        alt="Image"
-                    />
-                    <div class="img-overlay">
-                        <a
-                            href="{% static 'uploads/cant/G_05.jpeg' %}"
-                            data-rel="prettyPhoto[gal]"
-                            class="hoverbutton global-radius"
-                            ><i class="flaticon-unlink"></i
-                        ></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 gallery-grid gal_c gal_d">
-                <div class="gallery-single fix">
-                    <img
-                        src="{% static 'uploads/cant/G-02.jpeg' %}"
-                        class="img-responsive"
-                        alt="Image"
-                    />
-                    <div class="img-overlay">
-                        <a
-                            href="{% static 'uploads/cant/G-02.jpeg' %}"
-                            data-rel="prettyPhoto[gal]"
-                            class="hoverbutton global-radius"
-                            ><i class="flaticon-unlink"></i
-                        ></a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

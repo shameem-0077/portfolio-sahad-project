@@ -24,17 +24,26 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*)k=iaq9i7xeqho#*!ip^e2$^y!s&z17n@@y9y#56=%k@=)d*p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['web-production-d0ef.up.railway.app', 'mandadi.ca', 'www.mandadi.ca', ]
+ALLOWED_HOSTS = ['web-production-d0ef.up.railway.app', 'api.mandadi.ca', '127.0.0.1', ]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://mandadi.ca",
+    'https://www.mandadi.ca',
+    "http://localhost:3000",
+    "http://127.0.0.1:5500",
+]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-d0ef.up.railway.app',
+    'https://api.mandadi.ca',
     'https://mandadi.ca',
     'https://www.mandadi.ca',
 
 ]
 
+CORS_ALLOW_CREDENTIALS: True
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,6 +53,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
 
     'web',
 ]
@@ -52,6 +63,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -127,7 +139,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
@@ -142,3 +154,11 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
